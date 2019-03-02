@@ -1,8 +1,27 @@
 {
-  "name": "oe-coordinator",
-  "version": "0.0.1",
+  "name": "@open-e/oe-coordinator",
+  "version": "1.0.9",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
-  }
+  },
+  "description": "This module is used to detect mouse movement on the border of HTMLElement. Useful usecase is to enable resize event in `div` element when mouse is on the border of it.",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vibrat/oe-coordinator.git"
+  },
+  "author": "Lam Nguyen <lam.nguyen.mr@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vibrat/oe-coordinator/issues"
+  },
+  "homepage": "https://github.com/Vibrat/oe-coordinator#readme",
+  "keywords": [
+    "HTMLElement",
+    "Detector"
+  ]
 }

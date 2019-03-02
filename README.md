@@ -10,6 +10,8 @@ Step 2: import package
 Step 3: Setting border css property to targeted HTMLElement
 ```
 
+### 1. Detect on border of HTMLElement
+
 __Example__
 ```javascript
 import { Component, ElementRef, OnInit } from "@angular/core";
@@ -43,4 +45,44 @@ export class AppComponent implements OnInit {
     console.log ("onDragStartTest", this._coordinateService.onDragStart());
   }
 }
+```
+
+### 2. Trigger Dragging Menu
+
+
+__Step 1: Import Module__
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { EngineModule  as EventEffectModule } from "@open-e/oe-coordinator";
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    EventEffectModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+__Step 2: Using in your component__
+```javascript
+import { Component} from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  template: `<div horizonDrag min="-200" max="500" 
+             class="container"></div>`,
+  styleUrls: ["./app.component.scss"]
+})
+export class AppComponent{
+}
+
 ```
