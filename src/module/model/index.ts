@@ -1,0 +1,1 @@
+export { Public as PublicInterface } from "./coordinate.component.interface";
