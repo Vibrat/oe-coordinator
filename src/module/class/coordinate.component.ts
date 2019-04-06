@@ -1,8 +1,11 @@
 import { PublicInterface } from "../model";
 import { DEFAULT } from "../config";
 import { ClickEvent } from "./utilities/click.component";
+import { ClassEvent } from "./utilities/class.component";
 
 export namespace PublicAPI {
+
+  export var ClassBehavior = ClassEvent;
   export var ClickBehavior = ClickEvent;
   export class CoordinateComponent {
     private _element: HTMLElement;

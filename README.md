@@ -86,3 +86,9 @@ export class AppComponent{
 }
 
 ```
+
+### Trigger Zoom Effects 
+
+```javascript
+<div zoom-editor maxScale='4' minScale='0.5' accumulativeVal='0.1'></div>
+```
