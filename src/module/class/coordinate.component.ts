@@ -118,9 +118,12 @@ export namespace PublicAPI {
     }
 
     private detectMouseUpOutSide() {
-      document.addEventListener("mouseup", () => {
-        this._isDrag = false;
-      });
+      document.addEventListener(
+        "mouseup",
+        function() {
+          this._isDrag = false;
+        }.bind(this)
+      );
     }
   }
 }

@@ -42,11 +42,11 @@ export class AttributeDragDirective implements OnInit {
     this._pointerDown
       .asObservable()
       .pipe(
-        tap((event: MouseEvent) => {
+        tap(function(event: MouseEvent) {
           this._pageX = event.pageX - this._margin;
         }),
-        switchMap(() => this._pointerMove),
-        tap(event => {
+        switchMap(function () { return this._pointerMove}),
+        tap(function(event: MouseEvent) {
           this._margin = event.pageX - this._pageX;
           this.renderer.setStyle(
             this._ref.nativeElement,
